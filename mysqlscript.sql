@@ -408,4 +408,41 @@ END //
 
 DELIMITER ;
 
+INSERT INTO Staff (name, username, password_hash, role, contact, is_active, last_login) VALUES ('John Doe', 'johndoe', 'password', 'Manager', '9876543210', TRUE, '2024-01-30 10:15:00');
+
+
+
+select * from Products;
+INSERT INTO Suppliers (supplier_id, name, contact, email) VALUES
+(1, 'Tech Distributors', '9876543210', 'techsupplies@example.com'),
+(2, 'Gadgets Wholesale', '9123456789', 'gadgetswholesale@example.com'),
+(3, 'Digital Solutions', '9001112222', 'digitalsolutions@example.com');
+
+INSERT INTO Suppliers (supplier_id, name, contact_person, phone, email, address, is_active, balance) 
+VALUES 
+(1, 'Tech Supplies Inc.', 'John Doe', '123-456-7890', 'johndoe@techsupplies.com', '123 Tech St, Silicon Valley, CA', TRUE, 5000.00),
+(2, 'Alpha Distributors', 'Jane Smith', '987-654-3210', 'janesmith@alphadistributors.com', '456 Alpha Rd, New York, NY', TRUE, 3500.50),
+(3, 'Greenfield Enterprises', 'Michael Johnson', '555-123-4567', 'michael.johnson@greenfield.com', '789 Greenfield Ave, Los Angeles, CA', TRUE, 1200.75),
+(4, 'Beta Global', 'Emily Davis', '444-987-6543', 'emilydavis@betaglobal.com', '101 Beta Blvd, Miami, FL', FALSE, 0.00),
+(5, 'Omega Logistics', 'David Brown', '333-555-7777', 'davidb@omegalogistics.com', '202 Omega Ln, Chicago, IL', TRUE, 2150.00);
+
+INSERT INTO Categories (category_id, name, description, is_active)
+VALUES
+(1, 'Electronics', 'Devices like computers, phones, and gadgets', TRUE),
+(2, 'Furniture', 'Office and home furniture', TRUE),
+(3, 'Accessories', 'Items that complement main products, such as chargers and cables', TRUE),
+(4, 'Peripherals', 'Peripheral devices like keyboards, mice, and monitors', TRUE);
+
+
+INSERT INTO Products (category_id, name, barcode, selling_price, cost_price, unit_type, min_stock_level, is_active)
+VALUES
+(1, 'Laptop', '123456789012', 1500.00, 1200.00, 'Piece', 5, TRUE),
+(2, 'Office Chair', '987654321098', 250.00, 180.00, 'Piece', 10, TRUE),
+(3, 'Wireless Mouse', '192837465011', 20.00, 12.00, 'Piece', 50, TRUE),
+(1, 'Smartphone', '564738291001', 800.00, 600.00, 'Piece', 10, TRUE),
+(4, 'Keyboard', '102938475600', 45.00, 30.00, 'Piece', 30, TRUE);
+
+
+select * from PurchaseOrders;
+
 
